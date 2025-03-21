@@ -1,5 +1,5 @@
 import React from "react";
-import { CircleCheckBig, RefreshCw } from "lucide-react";
+import { CircleCheckBig, RefreshCw, Film } from "lucide-react";
 
 interface SuccessPageProps {
   formData: {
@@ -16,7 +16,7 @@ const SuccessPage: React.FC<SuccessPageProps> = ({ formData, onStartNewSurvey })
       <div className="w-full max-w-md">
         <div className="bg-gradient-to-r from-[rgb(151,34,194)] to-[rgb(82,16,230)] text-white p-4 rounded-t-md">
           <h2 className="text-xl font-bold flex items-center">
-            <span className="mr-2">🎬</span> Movie Survey
+            <span className="mr-2"><Film /></span> Movie Survey
           </h2>
         </div>
 

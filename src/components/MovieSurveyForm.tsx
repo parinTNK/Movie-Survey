@@ -31,6 +31,8 @@ const MovieSurveyForm: React.FC = () => {
     const newErrors: FormErrors = {};
     if (!formData.name.trim()) {
       newErrors.name = "โปรดใส่ชื่อของคุณ";
+    } else if (!isNaN(Number(formData.name.trim()))) {
+      newErrors.name = "ชื่อไม่สามารถเป็นตัวเลขได้";
     }
     if (!formData.email.trim()) {
       newErrors.email = "โปรดใส่อีเมลของคุณ";

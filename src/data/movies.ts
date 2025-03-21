@@ -2,8 +2,6 @@
 
 
 
-
-
 const movies = [
     { title: "Avatar", year: "2009", director: "James Cameron" },
     { title: "Inception", year: "2010", director: "Christopher Nolan" },

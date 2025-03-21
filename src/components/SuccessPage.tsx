@@ -6,6 +6,7 @@ interface SuccessPageProps {
     name: string;
     email: string;
     favoriteMovie: string;
+    comments?: string;
   };
   onStartNewSurvey: () => void;
 }
@@ -28,7 +29,6 @@ const SuccessPage: React.FC<SuccessPageProps> = ({ formData, onStartNewSurvey })
               ส่งแบบสำรวจสำเร็จ!
             </p>
 
-
             <div className="my-4">
             <div className="flex flex-cols gap-2 mb-1">
               <span className="text-gray-600 w-1/3 ">ชื่อ:</span>
@@ -38,17 +38,22 @@ const SuccessPage: React.FC<SuccessPageProps> = ({ formData, onStartNewSurvey })
               <span className="text-gray-600 w-1/3">อีเมล:</span>
               <span className="font-medium">{formData.email}</span>
             </div>
-            <div className="flex flex-cols gap-2">
+            <div className="flex flex-cols gap-2 mb-1">
               <span className="text-gray-600 w-1/3">หนังที่ชอบ:</span>
               <span className="font-medium text-purple-600">
                 {formData.favoriteMovie.split(" (")[0]}
               </span>
             </div>
+            {formData.comments && (
+              <div className="flex flex-cols gap-2">
+                <span className="text-gray-600 w-1/3">ความคิดเห็นเกี่ยวกับหนัง:</span>
+                <span className="font-medium">{formData.comments}</span>
+              </div>
+            )}
           </div>
           </div>
 
-         
-
+  
           <button
             onClick={onStartNewSurvey}
             className="w-full bg-black text-white py-2 px-4 rounded-md flex justify-center items-center"
